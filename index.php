@@ -35,11 +35,6 @@
 	</script>
 </head>
 <body>
-	<!--
-	<div id="toc">
-		<?php echo file_get_contents("toc.htm") ?>
-	</div>
-	-->
 	<iframe id="toc" src="toc.htm">
 		
 	</iframe>
