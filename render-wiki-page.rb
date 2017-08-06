@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 require 'github/markup'
 require 'html/pipeline'
-require 'html/pipeline/wiki_link'
+#require 'html/pipeline/wiki_link'
 require 'html/pipeline/rouge_filter'
 
 stylesheet="page-style.css"
