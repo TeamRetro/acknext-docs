@@ -1,20 +1,21 @@
 - [[Welcome]]
 - [[Introduction]]
-- *Objects*
+- Objects
 	- [[ENTITY]]
-- *Functions*
-	- *ENTITY*
+- Functions
+	- ENTITY
 		- [[ent_create]]
 		- [[ent_remove]]
-	- *VIEW*
+	- VIEW
 		- [[view_create]]
 		- [[view_remove]]
-	- *Collision*
+	- Collision
 		- [[c_trace]]
 		- [[c_move]]
 		- [[c_warp]]
-	- *var Mathematik*
+	- var Mathematik
 		- [[lerp]]
 		- [[clamp]]
-- *Variables*
+- Variables
 	- [[screen_color]]
+

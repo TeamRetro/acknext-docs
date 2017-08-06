@@ -7,7 +7,7 @@ PAGES=$(filter-out toc,$(basename $(shell ls markdown | grep md$)))
 all: $(OUTDIR)/index.htm \
 	$(OUTDIR)/page-style.css \
 	$(OUTDIR)/toc.css \
-	$(addprefix $(OUTDIR)/,$(addsuffix .htm,$(PAGES))) \
+	$(addprefix $(OUTDIR)/,$(addsuffix .htm,toc $(PAGES))) \
 	$(OUTDIR)/img
 
 $(OUTDIR)/index.htm: index.htm
