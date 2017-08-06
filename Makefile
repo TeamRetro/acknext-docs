@@ -1,6 +1,7 @@
 
 INDIR=markdown
 OUTDIR=html
+STYLEDIR=style
 PAGES=$(filter-out toc,$(basename $(shell ls markdown | grep md$)))
 
 all: $(OUTDIR)/index.htm \
@@ -30,7 +31,7 @@ $(OUTDIR)/%.htm: $(INDIR)/%.md
 	| ./render-wiki-page.rb \
 	> $@
 
-$(OUTDIR)/%.css: %.css
+$(OUTDIR)/%.css: $(STYLEDIR)/%.css
 	cp $< $@
 
 $(OUTDIR)/img:
