@@ -13,5 +13,8 @@
 		- [[c_trace]]
 		- [[c_move]]
 		- [[c_warp]]
+	- *var Mathematik*
+		- [[lerp]]
+		- [[clamp]]
 - *Variables*
 	- [[screen_color]]
