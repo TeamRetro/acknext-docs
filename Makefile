@@ -10,7 +10,8 @@ all: $(OUTDIR)/index.htm \
 	$(addprefix $(OUTDIR)/,$(addsuffix .htm,$(PAGES))) \
 	$(OUTDIR)/img
 
-$(OUTDIR)/index.htm: index.htm $(OUTDIR)/toc.htm
+$(OUTDIR)/index.htm: index.htm
+	cp $< $@
 
 REN_WIKI=sed -E "s|\[\[(\w+)\]\]|<a href=\"\1.htm\" target=\"content\">\1</a>|g"
 REN_NAV=sed -E "s|\*(\w+)\*|<span class='treenode'>\1</span>|g"

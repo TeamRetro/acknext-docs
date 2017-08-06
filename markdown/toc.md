@@ -1,3 +1,4 @@
+- [[Welcome]]
 - [[Introduction]]
 - *Objects*
 	- [[ENTITY]]

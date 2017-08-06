@@ -14,12 +14,16 @@ context = {
 }
 
 pipeline = HTML::Pipeline.new [
-  HTML::Pipeline::MarkdownFilter,
+#  HTML::Pipeline::MarkdownFilter,
 #  HTML::Pipeline::WikiLinkFilter,
 	HTML::Pipeline::RougeFilter
 ], context
 
-result = pipeline.call STDIN.read
+result = STDIN.read
+
+result = GitHub::Markup.render('input.md', result)
+
+result = pipeline.call result
 
 code = result[:output].to_s
 
