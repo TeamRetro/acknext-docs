@@ -4,7 +4,7 @@ Berechnet die tatsächliche Position und Größe einer [[VIEW]].
 
 ## Definition
 ```ack
-void view_to_bounds(VIEW * view, POINT * pt, SIZE * size)
+void view_to_bounds(VIEW const * view, POINT * pt, SIZE * size)
 ```
 
 ## Parameter
