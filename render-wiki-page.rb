@@ -4,6 +4,8 @@ require 'html/pipeline'
 #require 'html/pipeline/wiki_link'
 require 'html/pipeline/rouge_filter'
 
+load 'lib/acklex.rb'
+
 stylesheet="page-style.css"
 if ARGV[0]
 	stylesheet = ARGV[0]

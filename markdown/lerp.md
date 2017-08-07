@@ -2,7 +2,7 @@
 Berechnet eine lineare Interpolation zwischen zwei Werten.
 
 ## Definition
-```c
+```ack
 var lerp(var lhs, var rhs, var factor);
 ```
 
@@ -16,6 +16,6 @@ var lerp(var lhs, var rhs, var factor);
 Ist `factor` ein Wert zwischen 0 und 1 liegt das Ergebnis entsprechend `factor` dazwischen. Ist `factor` größer 1 oder kleiner 0 ist das Ergebnis eine Extrapolation.
 
 ## Beispiel
-```c
+```ack
 Sinnvolles Beispiel hier...
 ```

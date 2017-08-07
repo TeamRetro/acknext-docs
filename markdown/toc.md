@@ -9,6 +9,7 @@
 	- VIEW
 		- [[view_create]]
 		- [[view_remove]]
+		- [[view_to_bounds]]
 	- Collision
 		- [[c_trace]]
 		- [[c_move]]

@@ -3,7 +3,7 @@
 Creates a new view.
 
 ## Definition
-```c
+```ack
 VIEW * view_create(WIDGET * parent);
 ```
 
@@ -18,7 +18,7 @@ VIEW * view_create(WIDGET * parent);
 The newly created [[VIEW]].
 
 ## Example
-```c
+```ack
 // test the floor texturevec_set(temp, my.x);
 temp.z -= 500; // trace downwards 500 quants below
 c_trace (my.x,temp,IGNORE_ME|IGNORE_PASSABLE|IGNORE_MODELS|IGNORE_SPRITES|SCAN_TEXTURE); 

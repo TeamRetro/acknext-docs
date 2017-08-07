@@ -62,3 +62,31 @@ pre.highlight {
 .highlight-c .k, .highlight-c .kt {
 	color: blue;
 }
+
+.highlight-ack {
+	color: deeppink;
+}
+.highlight-ack .n, .highlight-ack .nf {
+	color: black;
+}
+.highlight-ack .nb {
+	color: black;
+}
+.highlight-ack .c1 {
+	color: green;
+}
+.highlight-ack .o {
+	color: purple;
+}
+.highlight-ack .p {
+	color: purple;
+}
+.highlight-ack .c1 {
+	color: green;
+}
+.highlight-ack .mi {
+	color: navy;
+}
+.highlight-ack .k, .highlight-ack .kt {
+	color: blue;
+}

@@ -4,7 +4,7 @@ An object in the 3D world, may be associated with a model and has a collision hu
 
 ## Definition
 
-```c
+```ack
 struct ENTITY
 {
 	union {
