@@ -1,8 +1,18 @@
 - [[Welcome]]
 - [[Introduction]]
-- Objects
+- Engineobjekte
 	- [[ENTITY]]
-- Functions
+	- [[VIEW]]
+	- [[VECTOR2]]
+	- [[VECTOR]]
+	- [[VECTOR4]]
+	- [[QUATERNION]]
+	- [[MATRIX]]
+	- [[UVCOORD]]
+	- [[POINT]]
+	- [[SIZE]]
+	- [[COLOR]]
+- Enginefunktionen
 	- ENTITY
 		- [[ent_create]]
 		- [[ent_remove]]
@@ -10,13 +20,18 @@
 		- [[view_create]]
 		- [[view_remove]]
 		- [[view_to_bounds]]
-	- Collision
+	- Kollision
 		- [[c_trace]]
 		- [[c_move]]
 		- [[c_warp]]
 	- var Mathematik
 		- [[lerp]]
 		- [[clamp]]
+		- [[cycle]]
+		- [[oscillate]]
+	- Vektor Mathematik
+		- [[vector]]
+		- [[vec_clone]]
 - Variables
 	- [[screen_color]]
 

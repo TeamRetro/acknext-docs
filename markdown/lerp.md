@@ -19,3 +19,6 @@ Ist `factor` ein Wert zwischen 0 und 1 liegt das Ergebnis entsprechend `factor` 
 ```ack
 Sinnvolles Beispiel hier...
 ```
+
+## Siehe auch
+- 
