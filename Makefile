@@ -9,6 +9,9 @@ all: $(OUTDIR)/index.htm \
 	$(OUTDIR)/toc.css \
 	$(addprefix $(OUTDIR)/,$(addsuffix .htm,toc $(PAGES))) \
 	$(OUTDIR)/img
+	
+list:
+	echo $(PAGES)
 
 $(OUTDIR)/index.htm: index.htm
 	cp $< $@
