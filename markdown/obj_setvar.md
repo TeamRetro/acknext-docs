@@ -15,15 +15,7 @@ void obj_setvar(void * obj, char const * name, GLenum type, ...)
 	Ein OpenGL-Typ, welcher auch für Uniforms erlaubt ist.
 - **`...`**
 	Von `type` abhängige Werte, welche den Wert der Variable angeben.
-
-## Aliase
-Diese Funktion steht auch unter den folgenden Namen als Alias zur Verfügung:
-- `mtl_setvar`
-- `ent_setvar`
-- `mesh_setvar`
-- `bmap_setvar`
-- `shader_setvar`
-
+	
 ## Beispiel
 ```ack
 …
@@ -147,7 +139,14 @@ aufgelistet und es wird für jeden Typ angegeben, welche Parameter in `...` erwa
 | `GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY`   | `uimage2DMSArray`      | ✗           | - |
 | `GL_UNSIGNED_INT_ATOMIC_COUNTER`               | `atomic_uint`          | ✗           | - |
 
-
+## Aliase
+Diese Funktion steht auch unter den folgenden Namen als Alias zur Verfügung:
+- `mtl_setvar`
+- `ent_setvar`
+- `mesh_setvar`
+- `bmap_setvar`
+- `shader_setvar`
 
 ## Siehe auch
+- [[Objektvariablen]]
 - [glGetActiveUniform](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveUniform.xhtml)

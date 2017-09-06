@@ -1,6 +1,7 @@
 - [[Welcome]]
 - [[Introduction]]
-- [[OpenGL_Interface]]
+- Allgemein
+	- [[Objektvariablen]]
 - Engineobjekte
 	- [[ENTITY]]
 	- [[VIEW]]
@@ -35,6 +36,7 @@
 	- Vektor Mathematik
 		- [[vector]]
 		- [[vec_clone]]
-- Variables
+- Variablen
 	- [[screen_color]]
-
+- Tiefergehendes
+	- [[OpenGL_Interface]]
