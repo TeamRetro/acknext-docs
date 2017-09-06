@@ -14,6 +14,8 @@
 	- [[SIZE]]
 	- [[COLOR]]
 - Enginefunktionen
+	- Allgemein
+		- [[obj_setvar]]
 	- ENTITY
 		- [[ent_create]]
 		- [[ent_remove]]
