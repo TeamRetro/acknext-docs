@@ -34,14 +34,8 @@ boneCount * BONE(
 	mat4  transform
 	mat4  bindToBoneTransform
 )
-meshCount * MESH
-meshCount * MATERIAL(
-	vec4 albedo
-	vec4 emission
-	float roughness
-	float metallic
-	float fresnell
-)
+meshCount * !MESH
+meshCount * !MATERIAL
 ```
 
 ## Meshdaten (`*.a3d`)
@@ -49,17 +43,56 @@ GUID: `ceb9e222-c803-43ac-81a9-149a32c5f39b`
 
 Abkürzung: **A**cknext **3D** Mesh
 
+```
+uint32 primitiveType
+uint32 indexCount
+uint32 vertexCount
+indexCount * uint32
+vertexCount * VERTEX(
+	vec3 positon
+	vec3 normal
+	vec3 tangent
+	vec4 color
+	vec2 uv0
+	vec2 uv1
+	ubyte4 boneIds
+	vec4 boneWeights
+)
+```
+
+## Acknext Material Format (`*.amf`)
+GUID: `324c6780-82b0-473d-a0a9-e0a34f6beea2`
+
+Abkürzung: **A**cknext **M**aterial **F**ormat
+
+```
+vec4 albedo
+vec4 emission
+float roughness
+float metallic
+float fresnell
+uint8 mask (1=albedo,2=normal,4=attribute,8=emission)
+mask&1: !TEXTURE albedo
+mask&2: !TEXTURE normal
+mask&4: !TEXTURE attribute
+mask&8: !TEXTURE emission
+```
+
 ## Texturdaten (`*.atx`)
 GUID: `b40f6426-2d6c-44b3-bd3d-629faa5aefe7`
 
 Abkürzung: **A**cknext **T**e**x**ture
 
-## Sounddaten (`*.asn`)
-GUID: `fa76951d-49a5-4c56-94be-0fd6d8988d97`
-
-Abkürzung: **A**cknext **S**ou**n**d
+```
+???
+```
 
 ## Shaderdaten (`*.asp`)
 GUID: `d247fbc8-7a2a-4521-a2c6-5ab5522c2843`
 
 Abkürzung: **A**cknext **S**hader **P**rogram
+
+## Sounddaten (`*.asn`)
+GUID: `fa76951d-49a5-4c56-94be-0fd6d8988d97`
+
+Abkürzung: **A**cknext **S**ou**n**d
