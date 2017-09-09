@@ -117,6 +117,6 @@ Symbolische Links werden automatisch von der Engine aufgelöst und die
 referenzierte Datei anstelle des tatsächlich angebenen Dateipfades geladen.
 
 ```
-bool allowCaching
+uint8  allowCaching
 string filePath
 ```
