@@ -33,6 +33,7 @@ puts <<HTML
 <!doctype html!>
 <html>
 <head>
+<meta charset="UTF-8" />
 <link rel="stylesheet" type="text/css" href="#{stylesheet}">
 </head>
 <body>
