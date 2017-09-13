@@ -26,11 +26,28 @@ li {
 	margin-bottom: 0.8em;
 }
 
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #DDD;
+}
+tr:nth-child(even) {
+	background-color: #EEE;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 0.2em;
+}
+
 strong code {
 	font-size: 1.2em;
 }
 
-pre.highlight {
+pre {
 	border: 2px solid lightblue;
 	background: #F8F8F8;
 	padding: 0.5em;

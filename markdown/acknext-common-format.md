@@ -33,7 +33,7 @@ boneCount * BONE(
 	uint8 parentId
 	mat4  transform
 	mat4  bindToBoneTransform
-)p
+)
 meshCount * !MESH
 meshCount * !MATERIAL
 ```
