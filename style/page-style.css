@@ -80,30 +80,31 @@ pre {
 	color: blue;
 }
 
-.highlight-ack {
+/* .highlight-ack */
+.highlight {
 	color: deeppink;
 }
-.highlight-ack .n, .highlight-ack .nf {
+.highlight .n, .highlight-ack .nf {
 	color: black;
 }
-.highlight-ack .nb {
+.highlight .nb {
 	color: black;
 }
-.highlight-ack .c1 {
+.highlight .c1 {
 	color: green;
 }
-.highlight-ack .o {
+.highlight .o {
 	color: purple;
 }
-.highlight-ack .p {
+.highlight .p {
 	color: purple;
 }
-.highlight-ack .c1 {
+.highlight .c1 {
 	color: green;
 }
-.highlight-ack .mi {
+.highlight .mi {
 	color: navy;
 }
-.highlight-ack .k, .highlight-ack .kt {
+.highlight .k, .highlight-ack .kt {
 	color: blue;
 }

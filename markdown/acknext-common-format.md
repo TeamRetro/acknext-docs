@@ -69,7 +69,7 @@ Abkürzung: **A**cknext **M**aterial **F**ormat
 vec4 albedo
 vec4 emission
 float roughness
-float metallic
+float metalness
 float fresnell
 uint8 mask (1=albedo,2=normal,4=attribute,8=emission)
 mask&1: !TEXTURE albedo
