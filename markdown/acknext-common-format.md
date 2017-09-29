@@ -28,6 +28,7 @@ Abkürzung: **A**cknext **M**odel **D**ata
 uint32 boneCount
 uint32 meshCount
 uint32 animationCount
+uint32 minimumLOD
 boneCount * BONE(
 	char  name[64]
 	uint8 parentId
@@ -47,6 +48,7 @@ Abkürzung: **A**cknext **3D** Mesh
 uint32 primitiveType
 uint32 indexCount
 uint32 vertexCount
+uint32 lodMask
 indexCount * uint32
 vertexCount * VERTEX(
 	vec3 positon
