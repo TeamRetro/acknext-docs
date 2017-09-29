@@ -37,6 +37,22 @@ boneCount * BONE(
 )
 meshCount * !MESH
 meshCount * !MATERIAL
+animationCount * ANIM(
+	string name
+	float duration
+	uint32 flags
+	uint32 channelCount
+	channelCount * CHAN(
+		uint8 targetBone
+		uint32 frameCount
+		frameCount * FRAME(
+			float time
+			vec3 position
+			quat rotation
+			vec3 scale
+		)
+	)
+)
 ```
 
 ## Meshdaten (`*.a3d`)
