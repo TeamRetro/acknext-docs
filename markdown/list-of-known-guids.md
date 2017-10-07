@@ -26,10 +26,10 @@
 ## Acknext Mesh Format
 `ceb9e222-c803-43ac-81a9-149a32c5f39b`
 
-## Acknexed Symbolic Link Format
+## Acknext Symbolic Link Format
 `6fb9e9d6-8786-49f0-9d6d-3916a7ba9c41`
 
-## RESERVED
+## Acknext Backreference
 `0723d144-f3df-44ff-a24e-ce9d1047ade9`
 
 ## RESERVED

@@ -48,12 +48,13 @@ GUID: `5507c27d-37b7-4623-b363-ed273e7ba962`
 
 ```
 uint32 size_x
-uint32 size_z
+uint32 size_z // size = size_x * size_z
 float hscale
-size_x*size_y TVERTEX (
-	float height
-	int texIndex
-)
+float[size] height
+TERRAMAT(
+	uint8 material
+	uint8 data
+)[size]
 !BITMAP normalMap
 !BITMAP textureArray
 ```

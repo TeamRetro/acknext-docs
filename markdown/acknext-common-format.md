@@ -7,17 +7,76 @@ eine Dateiendung ermöglicht.
 Alle Daten sind im Little-Endian-Format gespeichert und können somit mit einer herkömmlichen
 PC-Architektur (PC, x86) einfach verarbeitet werden.
 
-## Header
+## Datei-/Objektheader
 
 | Offset | Größe | Inhalt / Beschreibung                                              |
 |--------|-------|--------------------------------------------------------------------|
 |    `0` |  `12` | `{ 'A', 'C', 'K', 'N', 'E', 'X', 'T', 0, 0x67, 0xE3, 0x41, 0xCC }` |
-|   `12` |   `4` | [[ACKTYPE]] der Datei                                              |
+|   `12` |   `2` | [[ACKTYPE]] der Datei                                              |
+|   `14` |   `2` | *Version* des Formats                                              |
 |   `16` |  `16` | [[ACKGUID]] des serialisierten Dateitypen                          |
 
 Anhang des Typens sowie des GUID wird anschließend das [Filehandle](ACKFILE.md) an einen zur
 Datei passenden Lader übergeben. Dieser wird entweder von der Engine oder aber
 von einem [Erweiterungsmodul](EXTENSION.md) bereitgestellt.
+
+Falls *Version* nicht 0 ist, wird ein erweiterter Header verwendet:
+
+| Offset | Größe | Inhalt / Beschreibung                                              |
+|--------|-------|--------------------------------------------------------------------|
+|   `32` |   `4` | *Unique ID* des Objektes                                           |
+|   `36` |   `4` | Anzahl an Eigenschaften des geladenen Objektes                     |
+|   `40` |  `60` | Padding auf 64 Byte Größe                                          |
+
+Hier gibt die *Unique ID* eine Identifikationsnummer an, welche bei der Serialisierung
+von zusammengesetzten Objekten entweder `0` oder aber eindeutig sein muss.
+
+Falls die *Unique ID*  gesetzt ist, kann beim Deserialisieren später auf diese *Unique ID*
+verwiesen werden und somit ein doppeltes Laden/Abspeichern von Objekten verhindert.
+
+Die Anzahl an Properties gibt an, wie viele Eigenschaften hinter dem Header serialisiert
+werden und anschließend an das Objekt gebunden.
+
+Eigenschaften besitzen folgendes Format:
+
+```
+string name
+uint32 type
+uint32 length
+uint8[length] data
+```
+
+Hierbei ist der Inhalt in `data` abhängig von `type` zu interpretieren.
+
+> TODO: Dokumentiere Eigenschaften
+
+## Acknext Symbol Link
+GUID: `6fb9e9d6-8786-49f0-9d6d-3916a7ba9c41`
+
+Dieses Format speichert einen symbolischen Link zu einer externen Datei
+im virtuellen Dateisystem und kann somit als "Ersatz" für ein tatsächliche
+serialisiertes Objekte angegeben werden.
+
+Symbolische Links werden automatisch von der Engine aufgelöst und das Objekt
+aus der referenzierte Datei anstelle der aktuellen Datei geladen.
+
+```
+uint8  allowCaching
+string filePath
+```
+
+## Acknext Backreference
+GUID: `0723d144-f3df-44ff-a24e-ce9d1047ade9`
+
+Dieses Format verweist auf ein ein schon vorher serialisiertes Objekt durch eine 
+*Unique ID*.
+
+Backreferences werden automatisch von der Engine aufgelöst und das referenzierte
+Objekt anstelle eines neuen Objektes geladen.
+
+```
+uint32 referencedID
+```
 
 ## Modelldaten Version 1 (`*.amd`)
 GUID: `c4a67fe0-8274-4390-8ed6-50610b0a54f8`
@@ -123,18 +182,3 @@ Abkürzung: **A**cknext **S**hader **P**rogram
 GUID: `fa76951d-49a5-4c56-94be-0fd6d8988d97`
 
 Abkürzung: **A**cknext **S**ou**n**d
-
-## Acknext Symbol Link
-GUID: `6fb9e9d6-8786-49f0-9d6d-3916a7ba9c41`
-
-Dieses Format speichert einen symbolischen Link zu einer externen Datei
-im virtuellen Dateisystem und kann somit als "Ersatz" für ein tatsächliche
-serialisiertes Objekte angegeben werden.
-
-Symbolische Links werden automatisch von der Engine aufgelöst und die
-referenzierte Datei anstelle des tatsächlich angebenen Dateipfades geladen.
-
-```
-uint8  allowCaching
-string filePath
-```
